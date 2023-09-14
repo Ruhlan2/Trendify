@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.bottom_navigation.home.DetailsFragment"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Back"
+            android:textColor="@color/black"
+            app:icon="@drawable/baseline_arrow_circle_left_24"
+            app:iconSize="30dp"
+            app:iconTint="#FFA500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/detailimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:maxHeight="400dp"
+            android:minHeight="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
+
+        <TextView
+            android:id="@+id/detailprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailimg" />
+
+
+        <TextView
+            android:id="@+id/detailname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="ProductProductProductProductProduct"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/heartcheck"
+            app:layout_constraintStart_toStartOf="@+id/detailprice"
+            app:layout_constraintTop_toBottomOf="@+id/detailprice" />
+
+        <CheckBox
+            android:id="@+id/heartcheck"
+            android:longClickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="25dp"
+            android:button="@drawable/check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailimg"
+            app:useMaterialThemeColors="false" />
+
+        <!--
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/heartcheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="25dp"
+            android:button="@drawable/check"
+            android:checked="true"
+            android:thumb="@null"
+            app:track="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailimg"
+            app:useMaterialThemeColors="false" />
+-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton3"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rippleColor="#FFA500"
+            android:layout_margin="30dp"
+            android:text="Pay in installments"
+            android:textColor="@color/black"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating"
+            app:strokeColor="#FFA500"
+            app:strokeWidth="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/materialButton3"
+            app:layout_constraintStart_toStartOf="@+id/materialButton3"
+            app:layout_constraintTop_toBottomOf="@+id/materialButton3">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addstore"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:paddingHorizontal="50dp"
+                android:text="Add"
+                app:rippleColor="@color/black"
+                android:textColor="#FFA500"
+                app:cornerRadius="5dp"
+                app:strokeColor="#FFA500"
+                app:strokeWidth="2dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="706dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buy"
+                app:rippleColor="@color/white"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:paddingHorizontal="40dp"
+                android:backgroundTint="#FFA500"
+                android:text="Buy now"
+                android:textColor="@color/black"
+                app:cornerRadius="5dp"
+                app:strokeColor="#FFA500"
+                app:strokeWidth="2dp"
+                tools:layout_editor_absoluteX="207dp"
+                tools:layout_editor_absoluteY="705dp" />
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Rating"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/detailname"
+            app:layout_constraintTop_toBottomOf="@+id/detailname" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
